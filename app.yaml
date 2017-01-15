@@ -1,0 +1,21 @@
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: /
+  static_files: assets/index.html
+  upload: assets/index.html
+
+- url: /favicon\.ico
+  static_files: assets/favicon.ico
+  upload: assets/favicon\.ico
+
+- url: /
+  static_dir: assets
+
+skip_files: |
+    ^(.*/)?(
+    (.*\.psd)|
+    (Thumbs.db)|
+    )$
